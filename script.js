@@ -28,3 +28,23 @@
     document.querySelectorAll('#pubList li').forEach(li=>li.classList.add('shown'));
     btn.style.display='none';
   });
+
+  // nav tab switching
+  const navlinks = document.querySelectorAll('.navlink');
+  const tabSections = document.querySelectorAll('.tab-section');
+  const showTab = (target) => {
+    tabSections.forEach(sec => sec.classList.toggle('active', sec.id === target));
+    navlinks.forEach(nl => nl.classList.toggle('active', nl.getAttribute('data-target') === target));
+  };
+  navlinks.forEach(nl=>{
+    nl.addEventListener('click', ()=>{
+      showTab(nl.getAttribute('data-target'));
+      document.querySelector('.mainnav').scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  // deep-linking via #hash on load
+  const initial = window.location.hash.replace('#','');
+  if (initial && document.getElementById(initial)) {
+    showTab(initial);
+  }

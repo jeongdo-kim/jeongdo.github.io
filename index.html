@@ -53,8 +53,48 @@
   </div>
 </header>
 
+<!-- ============ QUOTE / SIGNATURE BAND ============ -->
+<section class="quote-section">
+  <div class="wrap">
+    <div class="quote-img">
+      <img src="images/signature.jpg" alt="Jeongdo Kim">
+    </div>
+    <div class="quote-text">
+      <span class="eyebrow fi">Väitöskirja, 2019</span>
+      <span class="eyebrow en">Dissertation, 2019</span>
+      <blockquote class="fi">"Hulisemisesta hulinaksi" — tutkimus siitä, miten äänet hiljalleen häviävät sanoista, mutta jättävät aina jälkensä.</blockquote>
+      <blockquote class="en">"From hulista to hulina" — a study of how sound slowly fades from words, yet always leaves a trace.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NAV ============ -->
+<nav class="mainnav">
+  <div class="wrap mainnav-inner">
+    <button type="button" class="navlink active" data-target="about">
+      <span class="fi">Esittely</span><span class="en">About</span>
+    </button>
+    <button type="button" class="navlink" data-target="works">
+      <span class="fi">Teokset</span><span class="en">Works</span>
+    </button>
+    <button type="button" class="navlink" data-target="services">
+      <span class="fi">Palvelut</span><span class="en">Services</span>
+    </button>
+    <button type="button" class="navlink" data-target="research">
+      <span class="fi">Julkaisut</span><span class="en">Publications</span>
+    </button>
+    <button type="button" class="navlink" data-target="press">
+      <span class="fi">Medialla</span><span class="en">Press</span>
+    </button>
+    <button type="button" class="navlink" data-target="contact">
+      <span class="fi">Yhteystiedot</span><span class="en">Contact</span>
+    </button>
+  </div>
+</nav>
+
+<main id="tabRoot">
 <!-- ============ ABOUT ============ -->
-<section id="about">
+<section id="about" class="tab-section active">
   <div class="wrap about">
     <div class="about-photo">
       <img src="images/about.jpg" alt="Jeongdo Kim">
@@ -98,7 +138,7 @@
 </section>
 
 <!-- ============ WORKS / BIBLIOGRAPHY ============ -->
-<section id="works">
+<section id="works" class="tab-section">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num">02</span>
@@ -161,7 +201,7 @@
 </section>
 
 <!-- ============ SERVICES ============ -->
-<section id="services">
+<section id="services" class="tab-section">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num">03</span>
@@ -196,23 +236,8 @@
   </div>
 </section>
 
-<!-- ============ QUOTE / SIGNATURE ============ -->
-<section class="quote-section">
-  <div class="wrap">
-    <div class="quote-img">
-      <img src="images/signature.jpg" alt="Jeongdo Kim">
-    </div>
-    <div class="quote-text">
-      <span class="eyebrow fi">Väitöskirja, 2019</span>
-      <span class="eyebrow en">Dissertation, 2019</span>
-      <blockquote class="fi">"Hulisemisesta hulinaksi" — tutkimus siitä, miten äänet hiljalleen häviävät sanoista, mutta jättävät aina jälkensä.</blockquote>
-      <blockquote class="en">"From hulista to hulina" — a study of how sound slowly fades from words, yet always leaves a trace.</blockquote>
-    </div>
-  </div>
-</section>
-
 <!-- ============ SCHOLARLY PUBLICATIONS ============ -->
-<section id="research">
+<section id="research" class="tab-section">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num">04</span>
@@ -239,7 +264,7 @@
 </section>
 
 <!-- ============ PRESS ============ -->
-<section id="press">
+<section id="press" class="tab-section">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num">05</span>
@@ -272,7 +297,7 @@
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section id="contact">
+<section id="contact" class="tab-section">
   <div class="wrap contact-grid">
     <div class="contact-lead">
       <div class="section-head">
@@ -302,6 +327,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <span class="fi">© 2026 Jeongdo Kim · Espoo, Suomi</span>

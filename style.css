@@ -1,13 +1,13 @@
   :root{
-    --paper: #16232E;
-    --paper-deep: #1D2E3B;
-    --ink: #E8E1CE;
-    --ink-soft: #A6B2BC;
-    --indigo: #C7A857;
-    --indigo-deep: #0F1922;
-    --seal: #C1584A;
-    --line: rgba(232,225,206,0.16);
-    --gold: #C7A857;
+    --paper: #2C3B48;
+    --paper-deep: #37495A;
+    --ink: #F1ECDD;
+    --ink-soft: #C1CBD1;
+    --indigo: #D8B96A;
+    --indigo-deep: #22303C;
+    --seal: #D97361;
+    --line: rgba(241,236,221,0.18);
+    --gold: #D8B96A;
     --max: 920px;
   }
   *{box-sizing:border-box;}
@@ -153,7 +153,8 @@
 
   /* ---------- section shell ---------- */
   section{padding:88px 0;}
-  section + section{border-top:1px solid var(--line);}
+  section.quote-section + section{border-top:none;}
+  .tab-section{border-top:none !important; padding-top:56px;}
   .section-head{
     display:flex; align-items:baseline; gap:18px; margin-bottom:44px;
     flex-wrap:wrap;
@@ -278,6 +279,36 @@
   .quote-text blockquote{
     margin:22px 0 0; font-family:'Spectral', serif; font-style:italic; font-weight:300;
     font-size:clamp(24px,2.6vw,32px); line-height:1.4; color:var(--ink);
+  }
+
+  /* ---------- nav ---------- */
+  .mainnav{
+    position:sticky; top:60px; z-index:40;
+    background:var(--indigo-deep);
+    border-bottom:1px solid var(--line);
+  }
+  .mainnav-inner{
+    display:flex; flex-wrap:wrap; gap:4px;
+    padding:0;
+  }
+  .navlink{
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:.04em;
+    text-transform:uppercase;
+    background:none; border:none; cursor:pointer;
+    color:var(--ink-soft);
+    padding:18px 18px 15px;
+    border-bottom:2px solid transparent;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .navlink:hover{color:var(--ink);}
+  .navlink.active{color:var(--gold); border-bottom-color:var(--gold);}
+
+  /* ---------- tab sections ---------- */
+  .tab-section{display:none;}
+  .tab-section.active{display:block; animation:tabIn .35s ease;}
+  @keyframes tabIn{
+    from{opacity:0; transform:translateY(6px);}
+    to{opacity:1; transform:translateY(0);}
   }
 
   /* ---------- contact ---------- */
